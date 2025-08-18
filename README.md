@@ -63,7 +63,8 @@ Open [http://localhost:5173](http://localhost:5173)
 ## 🔧 API Endpoints  
 
 ```
-GET    /api/Database/populateDatabase
+GET    /api/Database/populateDatabase  #To populate database, just make a GET request to http://localhost:3000/api/Database/       populateDatabase
+
 GET    /api/v1/questions
 GET    /api/v1/user/bookmarks
 GET    /api/v1/user/progress
@@ -93,4 +94,4 @@ This project is created for the GeekHaven Web Development selection process.
 
 **Anshdeep Singh**  
 Roll Number: **IIT2024011**  
-Indian Institute of Technology  
+Indian Institute of Information Technology Allahabad
