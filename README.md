@@ -63,7 +63,7 @@ Open [http://localhost:5173](http://localhost:5173)
 ## 🔧 API Endpoints  
 
 ```
-GET    /api/Database/populateDatabase  #To populate database, just make a GET request to http://localhost:3000/api/Database/       populateDatabase
+GET    /api/Database/populateDatabase  #To populate database, just make a GET request to http://localhost:3000/api/Database/populateDatabase
 
 GET    /api/v1/questions
 GET    /api/v1/user/bookmarks
