@@ -13,10 +13,10 @@ const useDashboard = () => {
     try {
       const [bookmarksRes, progressRes] = await Promise.all([
         fetch(
-          `http://localhost:3000/api/v1/user/bookmarks?email=${currentUser}`
+          `${import.meta.env.VITE_API_URL}/api/v1/user/bookmarks?email=${currentUser}`
         ),
         fetch(
-          `http://localhost:3000/api/v1/user/progress?email=${currentUser}`
+          `${import.meta.env.VITE_API_URL}/api/v1/user/progress?email=${currentUser}`
         ),
       ]);
 
@@ -53,7 +53,7 @@ const useDashboard = () => {
 
       try {
         const res = await fetch(
-          `http://localhost:3000/api/v1/user/update_bookmarks?email=${currentUser}&questionId=${question._id}`
+          `${import.meta.env.VITE_API_URL}/api/v1/user/update_bookmarks?email=${currentUser}&questionId=${question._id}`
         );
         const message = await res.json();
         console.log(message);
@@ -80,12 +80,12 @@ const useDashboard = () => {
     try {
       if (checked) {
         await fetch(
-          `http://localhost:3000/api/v1/user/update_progress?email=${currentUser}&questionId=${id}`
+          `${import.meta.env.VITE_API_URL}/api/v1/user/update_progress?email=${currentUser}&questionId=${id}`
         );
         toast.success("Marked as completed!");
       } else {
         await fetch(
-          `http://localhost:3000/api/v1/user/remove_progress?email=${currentUser}&questionId=${id}`
+          `${import.meta.env.VITE_API_URL}/api/v1/user/remove_progress?email=${currentUser}&questionId=${id}`
         );
         toast.info("Marked as incomplete");
       }

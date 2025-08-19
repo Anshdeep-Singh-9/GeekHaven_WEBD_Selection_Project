@@ -10,7 +10,7 @@ const useQuestions = () => {
   const fetchQuestions = async () => {
     try {
       setLoading(true);
-      const res = await fetch("http://localhost:3000/api/Database/all");
+      const res = await fetch(`${import.meta.env.VITE_API_URL}/api/Database/all`);
       const data = await res.json();
       setQuestions(data);
       setError(null);
@@ -32,7 +32,7 @@ const useQuestions = () => {
     try {
       setLoading(true);
       const response = await fetch(
-        `http://localhost:3000/api/Database/search?q=${searchTerm}`
+        `${import.meta.env.VITE_API_URL}/api/Database/search?q=${searchTerm}`
       );
       if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
       const data = await response.json();
